@@ -11,16 +11,14 @@ import SnapKit
 class InitialScreen: UIViewController {
     
     var viewList: [UIView] = []
-    
-    let cosmos_1 = ImagesSetView().cosmos_1()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         viewLayout()
     }
     
     private func addInViewList() {
-        viewList = [cosmos_1]
+        viewList = []
         
         for viewName in viewList {
             view.addSubview(viewName)
@@ -29,10 +27,7 @@ class InitialScreen: UIViewController {
     
     private func viewLayout() {
         addInViewList()
-        
-        cosmos_1.snp.makeConstraints { make in
-            make.top.leading.trailing.bottom.equalTo(view)
-        }
+        view.backgroundColor = UIColor.black
     }
 }
 
